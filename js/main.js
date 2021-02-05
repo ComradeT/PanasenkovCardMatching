@@ -1,4 +1,4 @@
-const deckCards = ["attentive.jpg", "attentive.jpg", "beautiful.jpg", "beautiful.jpg", "brilliant.jpg", "brilliant.jpg", "ingenious.jpg", "ingenious.jpg", "loving.jpg", "loving.jpg", "passionate.jpg", "passionate.jpg", "romantic.jpg", "romantic.jpg", "sexual.jpg", "sexual.jpg"];
+const deckCards = ["attentive-min.jpg", "attentive-min.jpg", "beautiful-min.jpg", "beautiful-min.jpg", "brilliant-min.jpg", "brilliant-min.jpg", "ingenious-min.jpg", "ingenious-min.jpg", "loving-min.jpg", "loving-min.jpg", "passionate-min.jpg", "passionate-min.jpg", "romantic-min.jpg", "romantic-min.jpg", "sexual-min.jpg", "sexual-min.jpg"];
 
 const deck = document.querySelector('.deck');
 
