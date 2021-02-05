@@ -84,6 +84,19 @@ h3{
     top: 0;
     width: 100%;
     height: 100%;
+    overflow-y: auto; 
+    background-color: rgb(46, 61, 73);
+    background-color: rgba(46, 61, 73, 0.6);
+}
+.overModal{
+    display: none;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto; 
     background-color: rgb(46, 61, 73);
     background-color: rgba(46, 61, 73, 0.6);
 }
@@ -99,6 +112,11 @@ h3{
     width: 80%;
 }
 .close{
+    align-self: flex-end;
+    color: #28e;
+    font-size: 5em;
+}
+.closeOver{
     align-self: flex-end;
     color: #28e;
     font-size: 5em;
@@ -120,6 +138,10 @@ p.ststs:last-child{
     margin-bottom: 1em;
 }
 .play-again-btn{
+    background: #28e;
+    margin-bottom: 1em;
+}
+.play-overAgain-btn{
     background: #28e;
     margin-bottom: 1em;
 }
@@ -174,6 +196,13 @@ img{
     background: #39d;
 }
 
+.video{
+    width: 500px;
+    height: 350px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -206,7 +235,7 @@ img{
         font-size: 1.8em;
     }
 }
-@media screen and (min-width: 550px){
+@media screen and (min-width: 800px){
     h1 {
         font-size: 6em;
     }
@@ -238,5 +267,11 @@ img{
     }
     .play-again-btn{
         font-size: 2em;
+    }
+}
+@media screen and (max-width: 450px){
+    .video{
+        width: 250px;
+        height: 200px;
     }
 }

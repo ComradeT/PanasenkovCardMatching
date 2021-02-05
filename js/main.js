@@ -6,9 +6,12 @@ let opened = [];
 
 let matched = [];
 
+const bodyLock = document.querySelector('body');
 const modal = document.getElementById('modal');
+const overModal = document.getElementById('overModal');
 const reset = document.querySelector('.reset-btn');
 const playAgain = document.querySelector('.play-again-btn');
+const playAgainOver = document.querySelector('.play-overAgain-btn');
 const movesCount = document.querySelector('.moves-counter');
 let moves = 0;
 const star = document.getElementById('star-rating').querySelectorAll('.star');
@@ -102,7 +105,7 @@ function compareTwo() {
     }
     if (opened.length === 2 && opened[0].src === opened[1].src) {
         match();
-    } else if (opened.length ===2 && opened[0].src != opened[1].src) {
+    } else if (opened.length === 2 && opened[0].src != opened[1].src) {
         noMatch();
     }
 }
@@ -123,6 +126,7 @@ function noMatch() {
         opened[0].parentElement.classList.remove('flip');
         opened[1].parentElement.classList.remove('flip');
         document.body.style.pointerEvents = 'auto';
+        overGame();
         opened = [];
     }, 700);
     movesCounter();
@@ -154,11 +158,31 @@ function displayModal() {
         }
     };
 }
+function displayOverModal() {
+    const closeOver = document.getElementsByClassName('closeOver')[0];
+    overModal.style.display = 'block';
+    closeOver.onclick = function() {
+        overModal.style.display = 'none';
+    };
+
+    window.onclick = function(event) {
+        if (event.target == overModal) {
+            overModal.style.display = 'none';
+        }
+    };
+}
 function winGame() {
     if (matched.length === 16) {
         stopTime();
         AddStats();
         displayModal();
+    }
+}
+function overGame() {
+    if (moves >= 15) {
+        stopTime();
+        AddStats();
+        displayOverModal();
     }
 }
 
@@ -188,3 +212,8 @@ playAgain.addEventListener('click', function() {
     modal.style.display = 'none';
     resetEverything();
 });
+playAgainOver.addEventListener('click', function() {
+    overModal.style.display = 'none';
+    resetEverything();
+});
+
