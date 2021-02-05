@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+
+        <header class="header">
+            <h1>Memory Card Game</h1>
+            <h2>Panasenkov edition</h2>
+        </header>
+
+        <section class="score-panel">
+
+            <h3>Score Panel</h3>
+
+            <ul id="star-rating" class="star-rating">
+
+                <li class="star">
+                    <i class="fa fa-star"></i>
+                </li>
+                <li class="star">
+                    <i class="fa fa-star"></i>
+                </li>
+                <li class="star">
+                    <i class="fa fa-star"></i>
+                </li>
+
+            </ul>
+
+            <span class="moves-counter">0</span> Moves
+
+            <div class="timer-container">
+                <span class="timer">
+                    <i class="fa fa-hourglass-start"></i> Timer: 00:00
+                </span>
+            </div>
+
+            <div class="reset">
+                <button class="btn reset-btn">
+                    Reset <i class="fa fa-repeat"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Modal -->
+
+        <section class="win-game-modal">
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Ты не дешёвка!</h2>
+                    <p>Панасенков Николаевич Евгеееееееееееений Вы наш Наполеон в просто ГЕЕЕЕНИЙ!!!</p>
+                    <p>Купи мою книгу!!!</p>
+                    <img class="modal-img" src="img/FirstScience.jpg" alt="">
+                    <button class="btn play-again-btn">Испытать эстетический оргазм еще раз?</button>
+                </div>
+            </div>
+        </section>
+
+        <ul class="deck"></ul>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
